@@ -14,6 +14,7 @@ if (keyboard_check(vk_up)) {
 }
 
 if (keyboard_check(vk_space) && is_bullet_ok) {
+	audio_play_sound(snd_zap,1,false);
   var bullet = instance_create_layer(x, y, "Instances", obj_bullet);
   bullet.direction = image_angle;
   is_bullet_ok = false;
